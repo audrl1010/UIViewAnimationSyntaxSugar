@@ -31,7 +31,7 @@ class ViewController: UIViewController {
       .options([])
       .animations { self.box.backgroundColor = .black }
       .completion { finished in
-        self.box.backgroundColor = .white
+        self.box.backgroundColor = .blue
       }
       .animate()
     
