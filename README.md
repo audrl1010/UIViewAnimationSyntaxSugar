@@ -18,7 +18,7 @@ UIView.animate(withDuration: 3.0, delay: 1.0, options: [], animations: {
     })
 ```
 
-다음과 같이 확장
+기본 Animation 사용시 Animator 사용
 ```
 UIView.Animator(duration: 3.0)
       .delay(1.0)
@@ -27,7 +27,7 @@ UIView.Animator(duration: 3.0)
       .animate()
 ```
 
-Spring  사용시
+Spring  사용시 SpringAnimator 사용
 ```
 UIView.SpringAnimator(duration: 3.0)
     .damping(1.0)
