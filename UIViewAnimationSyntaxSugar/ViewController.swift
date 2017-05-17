@@ -9,17 +9,87 @@
 import UIKit
 
 class ViewController: UIViewController {
+  
+  var box: UIView = {
+    let v = UIView(
+      frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+    v.backgroundColor = .white
+    v.translatesAutoresizingMaskIntoConstraints = false
+    return v
+  }()
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+    view.addSubview(box)
+    
+    box.center = CGPoint(x: view.frame.midX, y: view.frame.midY)
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    // Animator
+    UIView.Animator(duration: 3.0)
+      .delay(1.0)
+      .options([])
+      .animations { self.box.backgroundColor = .black }
+      .completion { finished in
+        self.box.backgroundColor = .white
+      }
+      .animate()
+    
+    // SpringAnimator
+    UIView.SpringAnimator(duration: 3.0)
+      .damping(1.0)
+      .velocity(1.0)
+      .delay(4.0)
+      .options([])
+      .animations {
+        self.box.frame.size = CGSize(width: 100, height: 100)
+      }
+      .animate()
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
