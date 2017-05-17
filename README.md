@@ -26,3 +26,14 @@ UIView.Animator(duration: 3.0)
       .completion { finished in self.box.backgroundColor = .white }
       .animate()
 ```
+
+Spring  사용시
+```
+UIView.SpringAnimator(duration: 3.0)
+    .damping(1.0)
+    .velocity(1.0)
+    .delay(4.0)
+    .options([])
+    .animations { self.box.frame.size = CGSize(width: 100, height: 100) }
+    .animate()
+```
