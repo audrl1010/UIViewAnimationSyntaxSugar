@@ -2,6 +2,8 @@
 UIView animation 코드의 가독성을 높여줍니다.
 
 
+[만드는 방법 설명](https://medium.com/p/1ea25ae3d84e/edit)
+
 기존 UIView Animation 소스
 
 ```
